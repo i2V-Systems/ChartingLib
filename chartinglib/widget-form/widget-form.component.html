@@ -1,4 +1,4 @@
-<!-- widget-form.component.html - Complete with inline validation -->
+﻿<!-- widget-form.component.html - Complete with inline validation -->
 
 <!-- Global Form Errors -->
 @if(getGlobalErrors().length > 0) {
@@ -160,13 +160,13 @@
           <div class="step-actions">
             <div></div>
             @if(!isPredefinedMode()) {
-            <button type="button" class="btn btn-primary" [disabled]="!isStepComplete(1)" (click)="goToNextStep()">
+            <i2v-button class="i2v-btn primary-default medium" [disabled]="!isStepComplete(1)" (click)="goToNextStep()">
               Next
-            </button>
+            </i2v-button>
             } @else {
-            <button type="button" class="btn btn-primary" (click)="goToStep(2)">
+            <i2v-button class="i2v-btn primary-default medium" (click)="goToStep(2)">
               Continue to Display Settings
-            </button>
+            </i2v-button>
             }
           </div>
         </div>
@@ -211,12 +211,12 @@
           </div>
 
           <div class="step-actions">
-            <button type="button" class="btn btn-secondary" (click)="goToPreviousStep()">
+            <i2v-button class="i2v-btn secondary-default medium" (click)="goToPreviousStep()">
               Previous
-            </button>
-            <button type="button" class="btn btn-primary" [disabled]="!isStepComplete(2)" (click)="goToNextStep()">
+            </i2v-button>
+            <i2v-button class="i2v-btn primary-default medium" [disabled]="!isStepComplete(2)" (click)="goToNextStep()">
               Next
-            </button>
+            </i2v-button>
           </div>
         </div>
       </p-accordionTab>
@@ -893,17 +893,17 @@
           }
 
           <div class="step-actions">
-            <button type="button" class="btn btn-secondary" (click)="goToPreviousStep()">
+            <i2v-button class="i2v-btn secondary-default medium" (click)="goToPreviousStep()">
               Previous
-            </button>
+            </i2v-button>
             @if(!isPredefinedMode()) {
-            <button type="button" class="btn btn-primary" [disabled]="!isStepComplete(3)" (click)="goToNextStep()">
+            <i2v-button class="i2v-btn primary-default medium" [disabled]="!isStepComplete(3)" (click)="goToNextStep()">
               Next
-            </button>
+            </i2v-button>
             } @else {
-            <button type="button" class="btn btn-primary" (click)="goToStep(4)">
+            <i2v-button class="i2v-btn primary-default medium" (click)="goToStep(4)">
               Continue to Widget Configuration
-            </button>
+            </i2v-button>
             }
           </div>
         </div>
@@ -958,12 +958,12 @@
           }
 
           <div class="step-actions">
-            <button type="button" class="btn btn-secondary" (click)="goToPreviousStep()">
+            <i2v-button class="i2v-btn secondary-default medium" (click)="goToPreviousStep()">
               Previous
-            </button>
-            <button type="button" class="btn btn-primary" [disabled]="!isStepComplete(4)" (click)="goToNextStep()">
+            </i2v-button>
+            <i2v-button class="i2v-btn primary-default medium" [disabled]="!isStepComplete(4)" (click)="goToNextStep()">
               Next
-            </button>
+            </i2v-button>
           </div>
         </div>
       </p-accordionTab>
@@ -1260,12 +1260,12 @@
           }
 
           <div class="step-actions">
-            <button type="button" class="btn btn-secondary" (click)="goToPreviousStep()">
+            <i2v-button class="i2v-btn secondary-default medium" (click)="goToPreviousStep()">
               Previous
-            </button>
-            <button type="button" class="btn btn-primary" [disabled]="!isStepComplete(5)" (click)="goToNextStep()">
+            </i2v-button>
+            <i2v-button class="i2v-btn primary-default medium" [disabled]="!isStepComplete(5)" (click)="goToNextStep()">
               Next
-            </button>
+            </i2v-button>
           </div>
         </div>
       </p-accordionTab>
@@ -1389,9 +1389,9 @@
           }
 
           <div class="step-actions">
-            <button type="button" class="btn btn-secondary" (click)="goToPreviousStep()">
+            <i2v-button class="i2v-btn secondary-default medium" (click)="goToPreviousStep()">
               Previous
-            </button>
+            </i2v-button>
             <!-- <button type="submit" class="btn btn-primary btn-submit" (click)="getPreview()" [disabled]="!isFormValid">
               <i class="pi pi-eye"></i>
               Get Preview
@@ -1427,10 +1427,10 @@
 
     <!-- Form Reset -->
     <div class="form-reset">
-      <button type="button" class="btn btn-outline-secondary" (click)="onReset()">
+      <i2v-button class="i2v-btn secondary-outline medium" (click)="onReset()">
         <i class="pi pi-refresh"></i>
         Reset Form
-      </button>
+      </i2v-button>
     </div>
 
     <!-- Form Status Indicator -->

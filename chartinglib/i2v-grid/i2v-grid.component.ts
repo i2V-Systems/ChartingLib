@@ -288,6 +288,7 @@ export class I2vGridComponent extends I2vChartsComponent {
       },
       footerRightButton: {
         name: 'No',
+        class: 'i2v-btn tertiary-secondary medium',
         Callback: () => {
           this.dialog.closeAll();
         },

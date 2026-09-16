@@ -1977,7 +1977,7 @@ stringToOperator(value: string): number {
             Callback: "Close",
             title: "Close",
             basedOnChildTemplate: true,
-            style: "i2v-btn tertiary-outline medium",
+            style: "i2v-btn tertiary-secondary medium",
           },
         ],
         showPreviousButton: false,
