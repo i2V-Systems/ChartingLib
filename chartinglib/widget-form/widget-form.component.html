@@ -361,9 +361,15 @@
                   <div class="field-rule-container">
                     <div class="field-select-container">
                       <label class="form-label medium">Property value</label>
-                      <input class="i2v-input primary-default medium" autocomplete="off" matInput
-                        [ngModelOptions]="{ standalone: true }" [(ngModel)]="rule.value"
-                        (ngModelChange)="onChange($event)" [pattern]="'^\\S.*'" required />
+                      <i2v-input
+  class="primary-default medium"
+  autocomplete="off"
+  [ngModelOptions]="{ standalone: true }"
+  [(ngModel)]="rule.value"
+  (ngModelChange)="onChange($event)"
+  [pattern]="'^\\S.*'"
+  [required]="true">
+</i2v-input>
                     </div>
                   </div>
                 </ng-container>
@@ -444,10 +450,17 @@
                   <div class="field-rule-container">
                     <div class="field-select-container">
                       <label class="form-label medium">Property value</label>
-                      <input class="i2v-input primary-default medium" autocomplete="off" matInput
-                        [ngModelOptions]="{ standalone: true }" [(ngModel)]="rule.value"
-                        (ngModelChange)="onChange($event)" type="number" min="0" step="1"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')" required />
+                     <i2v-input
+  class="primary-default medium"
+  autocomplete="off"
+  [ngModelOptions]="{ standalone: true }"
+  [(ngModel)]="rule.value"
+  (ngModelChange)="onChange($event)"
+  type="number"
+  min="0"
+  step="1"
+  [required]="true">
+</i2v-input>
                     </div>
                   </div>
                 </ng-container>
@@ -462,9 +475,17 @@
                   <div class="field-rule-container">
                     <div class="field-select-container">
                       <label class="form-label medium">Property value</label>
-                      <input class="i2v-input primary-default medium" autocomplete="off" matInput
-                        [ngModelOptions]="{ standalone: true }" [(ngModel)]="rule.value" type="number"
-                        (ngModelChange)="onChange($event)" />
+                      <i2v-input
+  class="primary-default medium"
+  autocomplete="off"
+  [ngModelOptions]="{ standalone: true }"
+  [(ngModel)]="rule.value"
+  (ngModelChange)="onChange($event)"
+  type="number"
+  min="0"
+  step="1"
+  [required]="true">
+</i2v-input>
                     </div>
                   </div>
                 </ng-container>
@@ -1014,13 +1035,15 @@
               <span class="checkbox-text">Allow Auto Refresh for widgets</span>
               
               @if(widgetForm.get('allowRefresh')?.value){
-                <input 
-                  class="i2v-input primary-default medium" 
-                  type="number" 
-                  [value]="widgetForm.get('refreshInterval')?.value"
-                  (input)="OnRefreshIntervalChange($event)"
-                  min="30" max="3600" />
-                <span> (in seconds)</span>
+                <i2v-input
+  class="primary-default medium refresh-input"
+  type="number"
+  [value]="widgetForm.get('refreshInterval')?.value"
+  (input)="OnRefreshIntervalChange($event)"
+  min="30"
+  max="3600">
+</i2v-input>
+<span> (in seconds)</span>
               }
             </div>
           </div>
